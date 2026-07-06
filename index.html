@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipDock Marketplace</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080a0d;--card:#11161d;--line:#26303b;--text:#f4f2ec;--muted:#8b96a4;--accent:#9a88ff;--soft:#c9ff3d}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0,rgba(154,136,255,.18),transparent 34%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;display:grid;place-items:center;padding:28px}
+    main{width:min(820px,100%);border:1px solid var(--line);background:linear-gradient(135deg,rgba(17,22,29,.96),rgba(11,14,19,.96));border-radius:22px;padding:28px;box-shadow:0 28px 80px rgba(0,0,0,.45)}
+    .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:900;margin:0 0 12px}h1{font-size:clamp(34px,7vw,64px);line-height:.92;letter-spacing:-.06em;margin:0 0 12px}p{color:var(--muted);line-height:1.6;margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px}.card{border:1px solid var(--line);background:#0f141a;border-radius:16px;padding:16px}.card span{display:block;font-size:10px;letter-spacing:.14em;color:var(--soft);font-weight:900;text-transform:uppercase}.card strong{display:block;margin:8px 0 5px;font-size:18px}.card a{color:var(--accent);font-weight:800;text-decoration:none;word-break:break-all}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(154,136,255,.35);background:rgba(154,136,255,.08);color:#dcd6ff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:850}.dot{width:8px;height:8px;border-radius:50%;background:var(--soft);box-shadow:0 0 14px rgba(201,255,61,.28)}code{color:#e8edf5}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="pill"><i class="dot"></i> Catálogo público activo</div>
+    <p class="eyebrow">ClipDock Marketplace</p>
+    <h1>Complementos de ClipDock</h1>
+    <p>Este sitio aloja el catálogo remoto y los paquetes públicos de complementos. En ClipDock pega la URL del catálogo para actualizar Complementos sin recompilar la app.</p>
+    <div class="grid">
+      <div class="card"><span>Catálogo</span><strong>catalog.json</strong><a href="catalog.json">Abrir JSON</a></div>
+      <div class="card"><span>Complemento</span><strong>ClipDock Remote</strong><a href="plugins/clipdock-remote-adobe/clipdock-remote-adobe-1.0.0.zip">Descargar ZIP</a></div>
+      <div class="card"><span>URL para ClipDock</span><strong>Remoto</strong><code>https://depsoniac.github.io/ClipDock-Marketplace/catalog.json</code></div>
+    </div>
+  </main>
+</body>
+</html>
