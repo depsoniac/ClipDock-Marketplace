@@ -1,0 +1,12 @@
+{
+  "schema": "clipdock.plugins.index.v1",
+  "generated": true,
+  "updatedAt": "2026-07-06",
+  "pluginsFolder": "./",
+  "manifestFile": "plugin.json",
+  "count": 2,
+  "folders": [
+    "clipdock-remote-adobe",
+    "iphone-orientation-fix"
+  ]
+}
