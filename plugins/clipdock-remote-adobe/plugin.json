@@ -35,6 +35,34 @@
   },
   "images": {
     "logo": "logo.png",
-    "banner": "banner.png"
-  }
+    "banner": "banner.png",
+    "screenshots": [
+      "shots/01-descarga.png",
+      "shots/02-laboratorio.png",
+      "shots/03-taller.png",
+      "shots/04-sfx.png"
+    ]
+  },
+  "details": [
+    {
+      "title": "Del enlace al proyecto",
+      "text": "Pega un link de YouTube, Vimeo o Twitch en el panel: ClipDock lo descarga, lo recodifica si quieres y lo importa directo al proyecto de Premiere. Sin salir del editor."
+    },
+    {
+      "title": "Laboratorio IA sobre tu selección",
+      "text": "Selecciona un clip o imagen en Premiere y aplícale IA: quitar fondo o escalar 2×/4×. El resultado vuelve solo al proyecto, y puedes insertarlo directo en el timeline."
+    },
+    {
+      "title": "Taller de recodificación",
+      "text": "Convierte la selección con los mismos presets del motor de escritorio (H.264 rápido, ProRes, etc.) e importa el resultado automáticamente."
+    },
+    {
+      "title": "Biblioteca SFX/VFX conectada",
+      "text": "Los efectos y recursos que guardas en ClipDock aparecen en el panel, listos para importarse al proyecto con un clic."
+    },
+    {
+      "title": "El puente ClipDock ↔ Premiere",
+      "text": "Con ClipDock abierto, el panel detecta el motor automáticamente. Presiona Enlazar y todo lo que proceses llega al proyecto activo."
+    }
+  ]
 }
