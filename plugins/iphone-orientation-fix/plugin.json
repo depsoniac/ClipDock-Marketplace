@@ -51,5 +51,9 @@
   },
   "links": {
     "support": "mailto:depsoncontacto@gmail.com?subject=Bug%20iPhone%20Orientation%20Fix"
+  },
+  "images": {
+    "logo": "logo.png",
+    "banner": "banner.png"
   }
 }

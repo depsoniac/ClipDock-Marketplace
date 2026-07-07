@@ -10,6 +10,5 @@
     "pluginsFolderUrl": "https://depsoniac.github.io/ClipDock-Marketplace/plugins/",
     "folderIndexFile": "index.json",
     "manifestFile": "plugin.json"
-  },
-  "remoteCatalogUrl": "https://depsoniac.github.io/ClipDock-Marketplace/catalog.json"
+  }
 }
