@@ -1,0 +1,42 @@
+name: Build ClipDock Registry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/**'
+      - 'scripts/build-catalog.js'
+      - '.github/workflows/build-catalog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build folder registry
+        env:
+          MARKETPLACE_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        run: node scripts/build-catalog.js
+
+      - name: Commit generated registry files
+        run: |
+          if git diff --quiet catalog.json plugins/index.json plugins/*/plugin.json; then
+            echo "registry no cambió"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json plugins/index.json plugins/*/plugin.json
+          git commit -m "chore: rebuild clipdock registry [skip ci]"
+          git push
