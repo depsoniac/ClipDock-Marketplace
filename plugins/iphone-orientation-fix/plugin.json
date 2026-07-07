@@ -1,0 +1,55 @@
+{
+  "schema": "clipdock.plugin.v1",
+  "id": "iphone-orientation-fix",
+  "slug": "iphone-orientation-fix",
+  "name": "iPhone Orientation Fix",
+  "author": "Depson",
+  "category": "adobe",
+  "type": "adobe-cep",
+  "host": [
+    "Adobe CEP",
+    "Premiere Pro"
+  ],
+  "version": "6.3.0",
+  "minClipDockVersion": "0.0.1",
+  "summary": "Corrige rotación de clips de iPhone por segmentos dentro de Premiere Pro.",
+  "description": "Panel CEP para Premiere Pro que detecta orientación de clips iPhone con ExifTool, corrige rotación por segmentos, aplica smart zoom, soporta multi-clip y permite restablecer la selección.",
+  "installMode": "download-adobe-cep",
+  "installDirName": "iphone-orientation-fix",
+  "tags": [
+    "Adobe CEP",
+    "Premiere",
+    "iPhone",
+    "Rotación",
+    "ExifTool"
+  ],
+  "cepSubdir": "cep",
+  "cepDirName": "iPhoneOrientationFix",
+  "package": {
+    "file": "iphone-orientation-fix-6.3.0.zip",
+    "format": "zip",
+    "sizeBytes": 32367,
+    "sizeLabel": "32 KB",
+    "sha256": "9edef252bf2b639fdc1bf33e34f881cfe40a9d667a646510b23e52f77453b87b",
+    "updatedAt": "2026-07-06"
+  },
+  "service": {
+    "id": "analysis-server",
+    "entry": "servidor_analisis.py",
+    "fallbackPort": 7788,
+    "healthPath": "/health"
+  },
+  "dependencies": {
+    "python": "3.7+",
+    "pip": [
+      "flask",
+      "flask-cors"
+    ],
+    "externalTools": [
+      "ExifTool"
+    ]
+  },
+  "links": {
+    "support": "mailto:depsoncontacto@gmail.com?subject=Bug%20iPhone%20Orientation%20Fix"
+  }
+}

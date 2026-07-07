@@ -104,6 +104,43 @@ Para que el workflow pueda guardar esos cambios, activa:
 Settings → Actions → General → Workflow permissions → Read and write permissions
 ```
 
+
+## Cómo publicar una actualización de un complemento
+
+ClipDock detecta updates comparando el `version` del `plugin.json` remoto contra la versión instalada en la PC del usuario. También guarda el `sha256` del ZIP instalado, así que la app nueva puede detectar que el paquete cambió aunque olvides subir el número de versión, pero la forma correcta siempre es subir versión.
+
+Flujo recomendado:
+
+```txt
+plugins/mi-plugin/
+  plugin.json
+  mi-plugin-1.0.1.zip
+```
+
+1. Mantén el mismo `id`, `slug` e `installDirName`. Eso le dice a ClipDock que es el mismo complemento.
+2. Sube el ZIP nuevo dentro de la misma carpeta del complemento.
+3. Cambia `version` en `plugin.json`, por ejemplo de `1.0.0` a `1.0.1`.
+4. Cambia `package.file` para apuntar al ZIP nuevo.
+5. Ejecuta `node scripts/build-catalog.js` o deja que GitHub Actions lo haga al hacer push.
+6. ClipDock leerá `catalog.json`, luego `plugins/index.json`, luego cada `plugin.json`; si detecta una versión mayor, mostrará UPDATE.
+
+Ejemplo:
+
+```json
+{
+  "id": "iphone-orientation-fix",
+  "slug": "iphone-orientation-fix",
+  "installDirName": "iphone-orientation-fix",
+  "version": "6.3.1",
+  "package": {
+    "file": "iphone-orientation-fix-6.3.1.zip",
+    "format": "zip"
+  }
+}
+```
+
+No necesitas editar a mano `catalog.json` para cada versión. Mientras la carpeta esté listada en `plugins/index.json`, ClipDock abre el `plugin.json` de esa carpeta y toma la versión más nueva desde ahí.
+
 ## Plugins incluidos
 
 ```txt
