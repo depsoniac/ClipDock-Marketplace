@@ -32,5 +32,9 @@
   },
   "links": {
     "support": "mailto:depsoncontacto@gmail.com?subject=Bug%20ClipDock%20Remote"
+  },
+  "images": {
+    "logo": "logo.png",
+    "banner": "banner.png"
   }
 }
