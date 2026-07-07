@@ -1,0 +1,1 @@
+Coloca aquí capturas (PNG) y agrégalas en plugin.json -> images.screenshots.
