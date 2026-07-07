@@ -13,7 +13,7 @@
   "version": "1.0.0",
   "minClipDockVersion": "0.0.1",
   "summary": "Organiza bins y consolida medios en la carpeta del proyecto, directo en Premiere Pro.",
-  "description": "Panel CEP híbrido: ordena automáticamente el panel de proyecto en bins y mueve o copia los medios usados a la carpeta del proyecto para dejarlo portable y limpio.",
+  "description": "Ordena automáticamente el panel de proyecto y mueve archivos de descargas o copia los medios de otras carpetas a la carpeta del proyecto para dejarlo portable y limpio.",
   "installMode": "download-adobe-cep",
   "installDirName": "premiere-hybrid-organizer",
   "tags": [
