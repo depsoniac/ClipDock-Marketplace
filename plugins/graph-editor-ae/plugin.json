@@ -65,5 +65,11 @@
   ],
   "installMode": "download-adobe-cep",
   "cepSubdir": "cep",
-  "cepDirName": "GraphEditor"
+  "cepDirName": "GraphEditor",
+  "creator": {
+    "handle": "Animateoo",
+    "name": "Animateo",
+    "github": "https://github.com/Animateoo",
+    "avatar": "https://github.com/Animateoo.png"
+  }
 }

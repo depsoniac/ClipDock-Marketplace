@@ -4,16 +4,16 @@
   "updatedAt": "2026-07-08",
   "pluginsFolder": "./",
   "manifestFile": "plugin.json",
-  "count": 8,
+  "count": 9,
   "folders": [
     "audify",
     "aura-pro",
     "cache-pro",
+    "clipdock-remote-adobe",
     "graph-editor-ae",
     "mask-unlinker",
     "mediavault",
     "shuttle",
-    "clipdock-remote-adobe",
     "text-presets-ae"
   ]
 }

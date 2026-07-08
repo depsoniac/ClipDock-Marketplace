@@ -28,7 +28,7 @@
     "sizeBytes": 49943,
     "sizeLabel": "49 KB",
     "sha256": "d81777be6701c3eda7fa2eb30751be5b6e9a597963a0798fd138cf8eb6228daa",
-    "updatedAt": "2026-07-06"
+    "updatedAt": "2026-07-07"
   },
   "links": {
     "support": "mailto:depsoncontacto@gmail.com?subject=Bug%20ClipDock%20Remote"
@@ -36,5 +36,11 @@
   "images": {
     "logo": "logo.png",
     "banner": "banner.png"
+  },
+  "creator": {
+    "handle": "depsoniac",
+    "name": "Depson",
+    "github": "https://github.com/depsoniac",
+    "avatar": "https://github.com/depsoniac.png"
   }
 }

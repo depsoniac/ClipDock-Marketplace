@@ -61,5 +61,11 @@
   ],
   "installMode": "download-ae-script",
   "aeScriptFile": "Mask Unlinker.jsx",
-  "installTarget": "After Effects > Scripts > ScriptUI Panels"
+  "installTarget": "After Effects > Scripts > ScriptUI Panels",
+  "creator": {
+    "handle": "Animateoo",
+    "name": "Animateo",
+    "github": "https://github.com/Animateoo",
+    "avatar": "https://github.com/Animateoo.png"
+  }
 }
