@@ -30,13 +30,39 @@
     "sizeBytes": 52850,
     "sizeLabel": "52 KB",
     "sha256": "9bcff9198e03fe6a571c6468708bcbd5fa854b3a65e7720a8745eeb5b34ca999",
-    "updatedAt": "2026-07-06"
+    "updatedAt": "2026-07-07"
   },
   "images": {
     "logo": "logo.png",
-    "banner": "banner.png"
+    "banner": "banner.png",
+    "screenshots": [
+      "shots/01-panel.png",
+      "shots/02-resultado.png"
+    ]
   },
   "links": {
     "support": "mailto:depsoncontacto@gmail.com?subject=Bug%20PR%20Hybrid%20Organizer"
-  }
+  },
+  "details": [
+    {
+      "title": "Tu proyecto necesita su propia carpeta",
+      "text": "Guarda el .prproj en una carpeta dedicada antes de usarlo: esa carpeta es la raíz donde el complemento organiza y consolida todo el material."
+    },
+    {
+      "title": "Organiza el panel en un clic",
+      "text": "“Solo organizar panel” reordena los bins del proyecto — Secuencias (Master y Anidadas), Footage separado por tipo (MP4 · MOV · WAV…) y Assets — sin mover ni un archivo del disco."
+    },
+    {
+      "title": "Consolidar: lo de Descargas se MUEVE",
+      "text": "Al dar “Analizar y preparar”, los medios que estén en tu carpeta de Descargas se mueven a la carpeta del proyecto. Descargas queda limpia y el proyecto se vuelve portable."
+    },
+    {
+      "title": "Lo demás solo se COPIA",
+      "text": "Los archivos que vivan en cualquier otra carpeta (plantillas, packs, bibliotecas) se copian en lugar de moverse: el original no se toca y tus plantillas siguen intactas para el siguiente proyecto."
+    },
+    {
+      "title": "Resultado: proyecto autocontenido",
+      "text": "Todo el material queda dentro de la carpeta del proyecto. Muévela a otro disco o PC y el proyecto abre completo, sin medios offline."
+    }
+  ]
 }

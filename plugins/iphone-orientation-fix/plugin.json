@@ -54,6 +54,21 @@
   },
   "images": {
     "logo": "logo.png",
-    "banner": "banner.png"
-  }
+    "banner": "banner.png",
+    "screenshots": []
+  },
+  "details": [
+    {
+      "title": "Detecta la orientación real",
+      "text": "Lee los metadatos EXIF de cada clip de iPhone con ExifTool para saber exactamente cómo se grabó cada segmento."
+    },
+    {
+      "title": "Corrige por segmentos",
+      "text": "Si el teléfono rotó a mitad de la grabación, el clip se corrige tramo por tramo dentro del timeline, no solo al inicio."
+    },
+    {
+      "title": "Smart zoom y multi-clip",
+      "text": "Aplica zoom inteligente para rellenar el encuadre y procesa varios clips seleccionados a la vez. Todo reversible con Restablecer."
+    }
+  ]
 }
