@@ -1,5 +1,0 @@
-Coloca aquí las capturas del complemento con estos nombres EXACTOS:
-- 01-descarga.png
-- 02-laboratorio.png
-- 03-taller.png
-- 04-sfx.png
