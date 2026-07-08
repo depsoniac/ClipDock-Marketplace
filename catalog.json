@@ -1,0 +1,14 @@
+{
+  "schema": "clipdock.registry.v1",
+  "registryVersion": 1,
+  "generated": true,
+  "updatedAt": "2026-07-08",
+  "name": "ClipDock Marketplace",
+  "description": "Punto de entrada mínimo. ClipDock lee esta URL, abre plugins/index.json y después carga cada plugins/<folder>/plugin.json.",
+  "discovery": {
+    "type": "folder-index",
+    "pluginsFolderUrl": "https://depsoniac.github.io/ClipDock-Marketplace/plugins/",
+    "folderIndexFile": "index.json",
+    "manifestFile": "plugin.json"
+  }
+}

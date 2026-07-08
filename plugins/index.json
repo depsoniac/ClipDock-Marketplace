@@ -1,0 +1,18 @@
+{
+  "schema": "clipdock.plugins.index.v1",
+  "generated": true,
+  "updatedAt": "2026-07-08",
+  "pluginsFolder": "./",
+  "manifestFile": "plugin.json",
+  "count": 8,
+  "folders": [
+    "audify",
+    "aura-pro",
+    "cache-pro",
+    "graph-editor-ae",
+    "mask-unlinker",
+    "mediavault",
+    "shuttle",
+    "text-presets-ae"
+  ]
+}

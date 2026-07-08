@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipDock Marketplace</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080a0d;--card:#11161d;--line:#26303b;--text:#f4f2ec;--muted:#8b96a4;--accent:#9a88ff;--soft:#c9ff3d;--bad:#ff6b8a}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0,rgba(154,136,255,.18),transparent 34%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;padding:28px}.wrap{width:min(1000px,100%);margin:auto;border:1px solid var(--line);background:linear-gradient(135deg,rgba(17,22,29,.96),rgba(11,14,19,.96));border-radius:22px;padding:28px;box-shadow:0 28px 80px rgba(0,0,0,.45)}
+    .pill{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(154,136,255,.35);background:rgba(154,136,255,.08);color:#dcd6ff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:850}.dot{width:8px;height:8px;border-radius:50%;background:var(--soft);box-shadow:0 0 14px rgba(201,255,61,.28)}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:900;margin:18px 0 12px}h1{font-size:clamp(34px,7vw,64px);line-height:.92;letter-spacing:-.06em;margin:0 0 12px}p{color:var(--muted);line-height:1.6;margin:0 0 22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:22px}.card{border:1px solid var(--line);background:#0f141a;border-radius:16px;padding:16px;min-height:150px}.card span{display:block;font-size:10px;letter-spacing:.14em;color:var(--soft);font-weight:900;text-transform:uppercase}.card strong{display:block;margin:8px 0 5px;font-size:18px}.card small{display:block;color:var(--muted);line-height:1.45;margin-bottom:12px}.card a{color:var(--accent);font-weight:800;text-decoration:none;word-break:break-all}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.tag{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.04);border-radius:999px;padding:5px 8px;color:#cfd6df;font-size:11px;font-weight:750}code{color:#e8edf5;word-break:break-all}.error{color:var(--bad);font-weight:800}
+    .author-card{margin-top:26px;border:1px solid rgba(154,136,255,.45);background:linear-gradient(135deg,rgba(154,136,255,.14),rgba(201,255,61,.05));border-radius:20px;padding:22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}.author-badge{width:72px;height:72px;border-radius:18px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px;color:var(--accent);background:#0f141a;border:2px solid var(--accent)}.author-card .who{flex:1 1 240px}.author-card .who b{font-size:20px;display:block}.author-card .who small{color:var(--muted);display:block;margin-top:3px}.author-links{display:flex;gap:10px;flex-wrap:wrap}.author-links a{border:1px solid var(--line);background:#0f141a;border-radius:999px;padding:9px 14px;color:var(--soft);font-weight:800;text-decoration:none;font-size:13px}.author-links a:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="pill"><i class="dot"></i> Registry público activo</div>
+    <p class="eyebrow">ClipDock Marketplace</p>
+    <h1>Complementos de ClipDock</h1>
+    <p>Este sitio usa un catálogo mínimo. <code>catalog.json</code> solo apunta a la carpeta <code>plugins/</code>; cada plugin vive en su propia carpeta con su <code>plugin.json</code> y su ZIP.</p>
+    <div class="grid">
+      <div class="card"><span>Entrada para ClipDock</span><strong>catalog.json</strong><small>Solo contiene la ruta de descubrimiento.</small><a href="catalog.json">Abrir JSON</a></div>
+      <div class="card"><span>Índice de carpetas</span><strong>plugins/index.json</strong><small>Lista qué carpetas de plugin existen.</small><a href="plugins/index.json">Abrir índice</a></div>
+      <div class="card"><span>URL para la app</span><strong>Remoto</strong><code id="catalog-url">catalog.json</code></div>
+    </div>
+    <p class="eyebrow" style="margin-top:30px">Autor destacado</p>
+    <section class="author-card">
+      <div class="author-badge">A</div>
+      <div class="who">
+        <b>Hecho por Animateo · Colombia</b>
+        <small>Plugins y scripts para After Effects, Premiere, Illustrator y Photoshop. Si te sirven, apóyalo siguiéndolo en sus redes.</small>
+      </div>
+      <div class="author-links">
+        <a href="https://github.com/Animateoo" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/animateoo/" target="_blank" rel="noopener">Instagram @animateoo</a>
+        <a href="mailto:mateosistema@gmail.com">Correo</a>
+      </div>
+    </section>
+    <p class="eyebrow" style="margin-top:30px">Complementos disponibles</p>
+    <div id="plugins" class="grid"></div>
+  </main>
+  <script>
+    const catalogUrl = new URL('catalog.json', location.href).href;
+    document.getElementById('catalog-url').textContent = catalogUrl;
+    const pluginsEl = document.getElementById('plugins');
+    function escapeHtml(value){return String(value ?? '').replace(/[&<>\"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
+    function joinUrl(base, part) { return new URL(String(part).replace(/^\/+/, ''), base).href; }
+    async function loadMarketplace() {
+      const catalogResponse = await fetch('catalog.json', {cache:'no-store'});
+      if (!catalogResponse.ok) throw new Error('No se pudo leer catalog.json');
+      const catalog = await catalogResponse.json();
+      const discovery = catalog.discovery || {};
+      const pluginsFolderUrl = discovery.pluginsFolderUrl || new URL('plugins/', location.href).href;
+      const folderIndexFile = discovery.folderIndexFile || 'index.json';
+      const manifestFile = discovery.manifestFile || 'plugin.json';
+      const indexUrl = joinUrl(pluginsFolderUrl, folderIndexFile);
+      const indexResponse = await fetch(indexUrl, {cache:'no-store'});
+      if (!indexResponse.ok) throw new Error('No se pudo leer plugins/index.json');
+      const folderIndex = await indexResponse.json();
+      const folders = folderIndex.folders || [];
+      const plugins = await Promise.all(folders.map(async folder => {
+        const manifestUrl = joinUrl(pluginsFolderUrl, `${folder}/${manifestFile}`);
+        const manifestResponse = await fetch(manifestUrl, {cache:'no-store'});
+        if (!manifestResponse.ok) throw new Error(`No se pudo leer ${folder}/${manifestFile}`);
+        const manifest = await manifestResponse.json();
+        const zipFile = manifest.package && manifest.package.file;
+        return { ...manifest, folder, manifestUrl, zipUrl: zipFile ? joinUrl(pluginsFolderUrl, `${folder}/${zipFile}`) : '' };
+      }));
+      pluginsEl.innerHTML = plugins.map(plugin => `
+        <article class="card">
+          <span>${escapeHtml(plugin.category || plugin.type || 'Plugin')}</span>
+          <strong>${escapeHtml(plugin.name)}</strong>
+          <small>${escapeHtml(plugin.summary || plugin.description || '')}</small>
+          <div class="meta">
+            <b class="tag">v${escapeHtml(plugin.version)}</b>
+            <b class="tag">${escapeHtml(plugin.package && plugin.package.sizeLabel || '')}</b>
+            ${(plugin.tags || []).slice(0,3).map(tag => `<b class="tag">${escapeHtml(tag)}</b>`).join('')}
+          </div>
+          ${plugin.zipUrl ? `<a href="${escapeHtml(plugin.zipUrl)}">Descargar ZIP</a><br>` : ''}
+          <a href="${escapeHtml(plugin.manifestUrl)}">Ver manifiesto</a>
+        </article>`).join('');
+    }
+    loadMarketplace().catch(err => { pluginsEl.innerHTML = `<p class="error">${escapeHtml(err.message)}</p>`; });
+  </script>
+</body>
+</html>

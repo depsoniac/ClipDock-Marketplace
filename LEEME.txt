@@ -1,0 +1,26 @@
+CLIPDOCK MARKETPLACE - Plugins de Animateo (Colombia)
+=====================================================
+
+Contenido:
+- plugins/            -> 8 plugins de Animateo, listos (plugin.json + ZIP + logo + banner)
+- scripts/build-catalog.js -> versión MEJORADA (salta plugins sin ZIP en vez de romper todo)
+- index.html          -> web de la tienda con la tarjeta destacada de Animateo
+- catalog.json / plugins/index.json -> generados para estos 8 plugins
+
+CÓMO USARLO EN TU REPO ClipDock-Marketplace:
+1. Copia las 8 carpetas de "plugins/" dentro de la carpeta "plugins/" de tu repo.
+2. Reemplaza tu "scripts/build-catalog.js" por el de aquí.
+3. Reemplaza tu "index.html" por el de aquí (o solo copia la tarjeta de Animateo).
+4. Haz commit a main. El workflow regenera catalog.json e index.json con TODOS
+   tus plugins (los tuyos antiguos + estos 8).
+
+PLUGINS INCLUIDOS:
+CEP (se instalan solos desde ClipDock):
+  - graph-editor-ae (After Effects)
+  - mediavault (After Effects + Premiere)
+  - shuttle (Illustrator + Photoshop)
+  - text-presets-ae (After Effects)
+Scripts de After Effects (.jsx, instalar en ScriptUI Panels - ver INSTALAR.txt):
+  - audify, aura-pro, cache-pro, mask-unlinker
+
+Crédito: Animateo (Colombia) - github.com/Animateoo - @animateoo - mateosistema@gmail.com
