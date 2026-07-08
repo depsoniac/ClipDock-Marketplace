@@ -4,7 +4,7 @@
   "updatedAt": "2026-07-08",
   "pluginsFolder": "./",
   "manifestFile": "plugin.json",
-  "count": 9,
+  "count": 10,
   "folders": [
     "audify",
     "aura-pro",
@@ -13,8 +13,8 @@
     "graph-editor-ae",
     "mask-unlinker",
     "mediavault",
-    "shuttle",
     "premiere-hybrid-organizer",
+    "shuttle",
     "text-presets-ae"
   ]
 }
