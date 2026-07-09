@@ -9,10 +9,10 @@
   "host": [
     "Adobe CEP"
   ],
-  "version": "1.0.0",
+  "version": "1.1.1",
   "minClipDockVersion": "0.0.1",
-  "summary": "Controla ClipDock desde Adobe con una sola extensión CEP.",
-  "description": "Extensión CEP opcional para conectar ClipDock con Adobe. Se instala desde Complementos y se sincroniza con la carpeta Adobe CEP del usuario.",
+  "summary": "Control remoto Adobe con dock compacto, importacion desde portapapeles y cola de ClipDock.",
+  "description": "Extension CEP opcional para conectar ClipDock con Premiere y After Effects. Incluye ruteo separado, dock compacto e importacion rapida desde portapapeles y cola.",
   "installMode": "download-adobe-cep",
   "installDirName": "clipdock-remote-adobe",
   "tags": [
@@ -23,12 +23,12 @@
   "cepSubdir": "cep",
   "cepDirName": "ClipDock CEP",
   "package": {
-    "file": "clipdock-remote-adobe-1.0.0.zip",
+    "file": "clipdock-remote-adobe-1.1.1.zip",
     "format": "zip",
-    "sizeBytes": 49943,
+    "sizeBytes": 49772,
     "sizeLabel": "49 KB",
-    "sha256": "d81777be6701c3eda7fa2eb30751be5b6e9a597963a0798fd138cf8eb6228daa",
-    "updatedAt": "2026-07-07"
+    "sha256": "8b857d0f9eee7dba09e0b052379abf216a316205af16473d1d2373bd24bd0e3c",
+    "updatedAt": "2026-07-09"
   },
   "links": {
     "support": "mailto:depsoncontacto@gmail.com?subject=Bug%20ClipDock%20Remote"
